@@ -1,0 +1,39 @@
+.personal-details-container ::ng-deep .mat-mdc-tab-labels {
+  flex-direction: column;
+}
+/* Styles for the active tab label */
+.personal-details-container ::ng-deep .mat-mdc-tab-labels.mat-mdc-tab-labels-active {
+  background-color: transparent;
+  color: red;
+  background-color: yellow;
+  border-right: 2px solid red;
+}
+/* Styles for the active tab label */
+.personal-details-container ::ng-deep .mat-mdc-tab-label {
+  background-color: transparent;
+  /* background-color: lightgray; */
+}
+.mat-mdc-tab-group {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+::ng-deep .personal-details-container .mat-mdc-tab-body-content {
+    font-size: 16px;
+    color: #010101;
+    font-weight: 500;
+    line-height: 21px;
+}
+::ng-deep .personal-details-container .mat-mdc-tab-label-container {
+    background-color: antiquewhite;
+    margin: 5px;
+    border-radius: 10px;
+}
+::ng-deep .personal-details-container .mat-mdc-tab-body-wrapper {
+    padding: 16px;
+    border-top: 1px solid #eee;
+}
+::ng-deep .personal-details-container .mat-tab-body-content-can-animate {
+    transition: unset;
+}

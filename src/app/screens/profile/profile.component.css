@@ -1,0 +1,44 @@
+  .resume-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+   
+  .resume-card {
+    width: 100%;
+    /* max-width: 800px; */
+    background-color: #fff;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .education-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    height: 100%;
+  }
+  ::ng-deep .education-tab .mdc-list-item.mdc-list-item--with-one-line {
+    height: unset !important;
+  }
+   
+  ::ng-deep .resume-container mat-chip-listbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .profile-container .personal-details-container{
+    margin: 20px 0;
+  }
+  ::ng-deep .resume-container .mat-step-label {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+
+  @media (max-width: 600px) {
+    .resume-card {
+      margin: 0 10px;
+    }
+  }
+  

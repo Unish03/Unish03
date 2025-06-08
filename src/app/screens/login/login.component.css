@@ -1,0 +1,49 @@
+.login-card {
+    width: 350px;
+    margin: 0px 60px 0px 0px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: none;
+    background-color: unset;
+    justify-self: center;
+}
+
+::ng-deep .login-card .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece {
+    border-color: #ffffff !important;
+}
+
+::ng-deep .login-card .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: #ffffff !important;
+}
+
+::ng-deep .login-card .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
+    color: #ffffff !important;
+}
+
+::ng-deep .login-card .mat-mdc-form-field-error {
+    color: #ffffff !important;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.login-card .login-btn {
+    color: #1a1b1f;
+    background-color: #f5cec1ed;
+    display: flex;
+    justify-self: center;
+}
+.login-card .login-btn:disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+}
+.login-card .login-btn:hover {
+    background-color: #ffff;
+    color: #1a1b1f;
+}

@@ -1,0 +1,100 @@
+
+<div class="profile-container">
+   <div class="resume-container">
+            <mat-card class="resume-card">
+              <mat-tab-group mat-stretch-tabs>
+                <mat-tab label="Profile">
+                  <ng-template mat-tab-label>
+                    <mat-icon>person</mat-icon>
+                    Profile
+                  </ng-template>
+                  <mat-card>
+                  <span class="personal-details-container">
+                    <app-personal-details></app-personal-details>
+                  </span>
+                  </mat-card>
+                </mat-tab>
+
+                <mat-tab label="Objective">
+                  <ng-template mat-tab-label>
+                    <mat-icon>assignment</mat-icon>
+                    Objective
+                  </ng-template>
+                  <mat-card>
+                    <p class="text-font">
+                      With 4 years of successfully developing interactive web applications with responsiveness, leveraging cutting-edge technologies and mentoring junior developers, I have significantly improved organizational scalability, user experience and UI/UX design, culminating in user satisfaction, product efficiency, and improvement of client-side scripts.
+                    </p>
+                    <p class="text-font">
+                      Skilled in Angular, HTML, JS, Typescript, Ngnix, Winscp and CSS, I am confident in my ability to bring valuable expertise and innovative solutions to any position.
+                    </p>
+                  </mat-card>
+                </mat-tab>
+           
+                <mat-tab label="Experience">
+                  <ng-template mat-tab-label>
+                    <mat-icon>work</mat-icon>
+                    Experience
+                  </ng-template>
+                  <mat-vertical-stepper linear>
+                    <mat-step  completed="true">
+                      <ng-template matStepLabel>System Engineer - Developer</ng-template>
+                      <div class="text-font">Tata Consultancy Services Chennai</div>
+                      <div class="text-font">2021 - 2024</div> 
+                      <div class="text-font">Working as Front end developer in Angular</div>
+                    </mat-step>
+                    <mat-step  completed="true">
+                      <ng-template matStepLabel>Packaged App Development Senior Analyst</ng-template>
+                      <div class="text-font">Accenture</div>
+                      <div class="text-font">2025 - Present</div>
+                      <div class="text-font">Working as full stack developer</div>
+                    </mat-step>
+                  </mat-vertical-stepper>
+                </mat-tab>
+           
+                <mat-tab label="Education">
+                  <ng-template mat-tab-label>
+                    <mat-icon>forum</mat-icon>
+                    Education
+                  </ng-template>
+                  <mat-vertical-stepper linear>
+                    <mat-step  completed="true">
+                      <ng-template matStepLabel>Bachelor of Engineering</ng-template>
+                      <div class="text-font">BAJALAKSHMI ENGINEERING COLLEGE</div>
+                      <div class="text-font">2016 - 2020</div>
+                      <div class="text-font">Bachelor of Engineering in Civil Engineering</div>
+                      <div class="text-font">75%</div>
+                    </mat-step>
+                    <mat-step  completed="true">
+                      <ng-template matStepLabel>Higher Secondary Certificate</ng-template>
+                      <div class="text-font">DR. NATARAJAN MATRIC HIGHER SECONDARY SCHOOL</div>
+                      <div class="text-font">2015 - 2016</div>
+                      <div class="text-font">Higher Secondary Certificate in Science</div>
+                      <div class="text-font">89%</div>
+                    </mat-step>
+                    <mat-step  completed="true">
+                      <ng-template matStepLabel>Secondary School Certificate</ng-template>
+                      <div class="text-font">DR. NATARAJAN MATRIC HIGHER SECONDARY SCHOOL</div>
+                      <div class="text-font">2014 - 2015</div>
+                      <div class="text-font">Secondary School Certificate in Science</div>
+                      <div class="text-font">90%</div>
+                    </mat-step>
+                  </mat-vertical-stepper>
+                </mat-tab>
+           
+                <mat-tab label="Skills">
+                  <ng-template mat-tab-label>
+                    <mat-icon>library_add</mat-icon>
+                    Skills
+                  </ng-template>
+                  <mat-chip-listbox>
+                    <mat-chip color="primary" selected>Angular</mat-chip>
+                    <mat-chip color="accent" selected>TypeScript</mat-chip>
+                    <mat-chip color="warn" selected>Node.js</mat-chip>
+                    <mat-chip color="primary" selected>MongoDB</mat-chip>
+                    <mat-chip color="accent" selected>HTML/CSS</mat-chip>
+                  </mat-chip-listbox>
+                </mat-tab>
+              </mat-tab-group>
+            </mat-card>
+          </div>
+</div>
