@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
 import { RouterModule, Router } from '@angular/router';
+import { DataServiceService } from '../services/data-service.service';
+import { MatDialog, MatDialogActions,MatDialogClose,MatDialogContent,MatDialogRef,MatDialogTitle} from '@angular/material/dialog';
+import { DeviceCaptureComponent } from '../../shared/componets/device-capture/device-capture.component';
 
 @Component({
   selector: 'app-login',
@@ -16,11 +19,10 @@ import { RouterModule, Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  @Output() loginSuccess = new EventEmitter<void>();
   loginForm: FormGroup;
- 
-  constructor(private fb: FormBuilder, private router: Router) {
-this.loginForm = this.fb.group({
+
+  constructor(private fb: FormBuilder, private router: Router, private service: DataServiceService, private dialog: MatDialog) {
+    this.loginForm = this.fb.group({
       username: [
         '',
         [
@@ -48,10 +50,19 @@ this.loginForm = this.fb.group({
  
   onSubmit() {
     if (this.loginForm.valid) {
-      // Proceed with login logic
+      // Proceed with login logic 
+      this.service.setLoggedInFlag(true); // Assuming you have a service to manage login state
+      this.openDialog(); // Open DeviceCaptureComponent dialog
       this.router.navigate(['/details']); // Navigate to ProfileComponent
-      this.loginSuccess.emit();
     }
+  }
+  openDialog(){
+    this.dialog.open(DeviceCaptureComponent, {
+      width: '500px',
+      height: '400px',
+      enterAnimationDuration: '0ms',
+      exitAnimationDuration: '0ms',
+    });
   }
 }
 

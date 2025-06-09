@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatChipsModule } from '@angular/material/chips';
 import { RouterModule } from '@angular/router';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatStepperModule,
     MatChipsModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule
   ],
   exports: [
     ReactiveFormsModule,
@@ -40,7 +42,8 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatStepperModule,
     MatChipsModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }

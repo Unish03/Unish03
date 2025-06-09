@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../shared.module';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,5 +11,13 @@ import { SharedModule } from '../../shared.module';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+constructor(private router: Router,) { }
+ngOnInit() {
+  // Initialization logic can go here
+  console.log('Header component initialized');    
+}
+closeTab() {
+  //  window.close();
+  window.location.href = 'https://www.google.co.in/';
+}
 }

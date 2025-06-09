@@ -18,4 +18,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: fit-content !important;
     background-color: #f0f0f0 !important;
 }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content !important;
+    background-color: #f0f0f0 !important;
+}
 

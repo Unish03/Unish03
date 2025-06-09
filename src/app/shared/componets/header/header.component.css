@@ -1,6 +1,14 @@
 .header-title {
     font-size: 24px;
     font-weight: 600;
-    color: #4b26dc;
-    margin: auto;
+    color: #441a08;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 90%;
+
 }   
+.header-actions {
+    font-size: 24px;
+    font-weight: 600;
+    color: #441a08;
+}

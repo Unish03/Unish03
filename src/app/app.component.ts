@@ -21,16 +21,14 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'new-project';
-  isLoggedIn = false;
+  isLoggedIn: boolean = false;
 
   constructor(private router: Router) {
-    console.log('AppComponent initialized');  
   }
   ngOnInit() {
-    console.log('AppComponent ngOnInit called');
+    // this.isLoggedIn = this.service.loggedInFlag ? true : false;
   }
-
-  onLogin() {
-    this.isLoggedIn = true;
+  isDetailsRoute(): boolean {
+    return this.router.url == '/details';
   }
 }

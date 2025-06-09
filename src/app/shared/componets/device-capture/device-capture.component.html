@@ -1,0 +1,17 @@
+<div class="device-info">
+<div><h3>Device Information</h3></div>
+<div class="device-info" *ngIf="deviceInfo?.browser"><span class="device-info-title">Browser:</span> {{ deviceInfo.browser }} - {{ deviceInfo.browser_version }}</div>
+<div class="device-info" *ngIf="deviceInfo?.device"><span class="device-info-title">Device:</span> {{ deviceInfo.device }} - {{ deviceInfo.deviceType }}</div>
+<div class="device-info" *ngIf="deviceInfo?.orientation"><span class="device-info-title">Orientation:</span> {{ deviceInfo.orientation }}</div>
+<div class="device-info" *ngIf="deviceInfo?.os"><span class="device-info-title">OS:</span> {{ deviceInfo.os }} - {{ deviceInfo.os_version }}</div>
+<div class="device-info" *ngIf="deviceInfo?.userAgent"><span class="device-info-title">Browser Url:</span> {{ deviceInfo.userAgent }}</div>
+<div class="device-info" *ngIf="deviceInfo?.screenWidth && deviceInfo?.screenHeight"><span class="device-info-title">Screen:</span> {{ deviceInfo.screenWidth }} x {{ deviceInfo.screenHeight }}</div>
+<div class="device-info" *ngIf="deviceInfo?.pixelRatio"><span class="device-info-title">PixelRatio:</span> {{ deviceInfo.pixelRatio }}</div>
+<div class="device-info" *ngIf="deviceInfo?.language"><span class="device-info-title">Language:</span> {{ deviceInfo.language }}</div>
+<div class="device-info" *ngIf="deviceInfo?.timezone"><span class="device-info-title">Timezone:</span> {{ deviceInfo.timezone }}</div>
+<div>
+    <mat-dialog-actions>
+  <button matButton mat-dialog-close>Close</button>
+</mat-dialog-actions>
+</div>
+</div>
