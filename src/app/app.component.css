@@ -12,8 +12,12 @@
     font-style: italic !important;
     font-family: sans-serif !important;
 }
-
-    
+.img-resume {
+    background-image: url('../asset/images/background.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
 .content {
     min-height: calc(100% - 100px);
     height: 46%;

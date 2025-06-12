@@ -31,4 +31,7 @@ export class AppComponent {
   isDetailsRoute(): boolean {
     return this.router.url == '/details';
   }
+  isResumeRoute(): boolean {
+    return this.router.url == '/resume';
+  }
 }
