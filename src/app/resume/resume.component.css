@@ -22,7 +22,7 @@ header {
     background: #8e5b3080;
     padding: 1.5em;
     text-align: center;
-    position: sticky;
+    /* position: sticky; */
     color: #FFF;
     border-radius: 10px;
     border: 1px solid #8e5b3080;
@@ -40,6 +40,7 @@ header h1 {
     user-select: none;
     margin-bottom: 0.25em;
 }
+
 .fade-slide h2 {
     font-size: 25px;
     animation: pulseRedGlow 2.5s infinite ease-in-out;
@@ -88,9 +89,9 @@ nav a:focus::after {
 
 /* Sections initial hidden + slide/fade */
 section {
-    padding: 3em 1em;
+    padding: 1em 1em;
     max-width: 960px;
-    margin: 3em auto;
+    margin: auto;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -132,12 +133,9 @@ h2 {
 
 /* Project cards initial hidden + fade/slide + scale */
 .project {
-    /* opacity: 0; */
-    /* transform: translateY(-8px) scale(1.03); */
-    box-shadow: 0 10px 30px rgb(0 255 157);
-    /* transform: translateY(20px) scale(0.95); */
-    margin-bottom: 2.5em;
-    background: #1a1a1a08;
+    box-shadow: 0 10px 30px rgb(0 255 255);
+    margin: 2.5em 0px;
+    background: #2d262678;
     padding: 1.5em 1.2em;
     border-left: 5px solid var(--accent-color);
     border-radius: 8px;
@@ -159,7 +157,7 @@ h2 {
 
 .project h3 {
     margin-bottom: 0.5em;
-    color: var(--accent-color);
+    color: #80ffbc;
     user-select: text;
 }
 
@@ -168,6 +166,7 @@ h2 {
     margin-bottom: 0.8em;
     user-select: text;
 }
+
 .fade-slide p {
     color: #ffffff;
     font-size: 16px;
@@ -176,17 +175,17 @@ h2 {
 }
 
 .project a {
-    color: var(--accent-color);
+    color: #ffb700;
+    text-decoration: underline;
     font-weight: 600;
-    text-decoration: none;
     border-bottom: 1.5px solid transparent;
     transition: border-color 0.3s ease;
 }
 
 .project a:hover,
 .project a:focus {
-    border-color: var(--accent-color);
-    text-decoration: underline;
+    /* border-color: var(--accent-color); */
+    color: #ff6a00;
 }
 
 footer {
@@ -218,6 +217,7 @@ footer {
         color: #00b8a9;
     }
 }
+
 @keyframes pulseRedGlow {
 
     0%,
@@ -237,6 +237,7 @@ footer {
         color: #b80000;
     }
 }
+
 /* Responsive */
 @media (max-width: 600px) {
     nav {
@@ -253,4 +254,87 @@ footer {
     section {
         margin: 2em 1em;
     }
+}
+
+/* Hamburger button styling */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    text-align: justify;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--accent-color);
+    height: 3px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: fixed;
+}
+.hamburger {
+    width: 100%;
+    top: 12px;
+}
+.hamburger::before,
+.hamburger::after {
+    /* position: absolute; */
+    width: 100%;
+}
+.hamburger::before {
+    top: -8px;
+}
+.hamburger::after {
+    top: 8px;
+}
+/* When menu is open, animate hamburger to X */
+.hamburger.open {
+    background-color: transparent;
+}
+.hamburger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.hamburger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Mobile nav styles */
+
+@media (max-width: 600px) {
+    nav {
+position: fixed;
+        top: 0;
+        right: 0;
+        height: 57vh;
+        width: 150px;
+        background: #1c1b19;
+        padding-top: 0.5em;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: -2px 0 10px rgb(0 255 225);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1050;
+    }
+    nav.open {
+        transform: translateX(0);
+    }
+    nav a {
+        font-size: 1.3em;
+        padding: 10px 1.5em;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Disable scroll when menu open */
+
+body.menu-open {
+    overflow: hidden;
 }

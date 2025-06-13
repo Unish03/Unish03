@@ -1,9 +1,14 @@
 <ng-container>
-  <div class="screen-body" [ngClass]="{'img-resume': isResumeRoute()}">
+  <div class="screen-body img" *ngIf="!isResumeRoute()">
     <div class="container">
         <span *ngIf="isDetailsRoute()"><app-header class="header-container"></app-header></span> 
          <div class="content"><router-outlet></router-outlet></div>
           <span *ngIf="isDetailsRoute()"><app-footer class="footer-container"></app-footer></span>
+    </div>
+  </div>
+    <div class="screen-body img-resume" *ngIf="isResumeRoute()">
+    <div class="container">
+         <div><router-outlet></router-outlet></div>
     </div>
   </div>
 </ng-container>

@@ -1,70 +1,124 @@
 <header>
-<h1>Unish Kumar</h1>
-<nav>
-<a href="#about" tabindex="1">About</a>
-<a href="#skills" tabindex="2">Skills</a>
-<a href="#projects" tabindex="3">Projects</a>
-<a href="#education" tabindex="4">Education</a>
-<a href="#contact" tabindex="5">Contact</a>
-</nav>
+  <h1>Unish Kumar V</h1>
+  <nav id="primary-navigation" role="navigation" [class.open]="isMenuOpen">
+    <a (click)="scrollToTop('about')" tabindex="1">About</a>
+    <a (click)="scrollToTop('skills')" tabindex="2">Skills</a>
+    <a (click)="scrollToTop('projects')" tabindex="3">Projects</a>
+    <a (click)="scrollToTop('education')" tabindex="4">Education</a>
+    <a (click)="scrollToTop('contact')" tabindex="5">Contact</a>
+  </nav>
 </header>
- 
+<button id="menu-toggle" aria-label="Toggle navigation menu" [attr.aria-expanded]="isMenuOpen"
+  aria-controls="primary-navigation" (click)="toggleMenu()" class="menu-toggle">
+  <span class="hamburger" [class.open]="isMenuOpen"> <mat-icon>home</mat-icon></span>
+</button>
 <main>
-<section id="about" tabindex="5" class="fade-slide visible">
-  <h2>About Me</h2>
-  <p>Hi! I'm Unish, a full-stack developer with a passion for building responsive, accessible web apps. I specialize in JavaScript, React, Node.js, and more.</p>
-</section>
+  <section id="about" tabindex="5" class="fade-slide visible">
+    <h2>About Me</h2>
+    <div class="project visible" tabindex="5">
+      <p>
+        I'm not just a developer — I'm a digital problem solver. From crafting pixel-perfect UIs to building scalable
+        APIs, I bring ideas to life through code.
+      </p>
+      <p>With 4 years of successfully developing interactive web applications with responsiveness, leveraging
+        cutting-edge technologies and mentoring junior developers, I have significantly improved organizational
+        scalability, user experience and UI/UX design, culminating in user satisfaction, product efficiency, and
+        improvement of client-side scripts.
+      </p>
+      <br>
+      <p>Skilled in Angular, HTML, JS, Typescript, Ngnix, Winscp and CSS, I am confident in my ability to bring valuable
+        expertise and innovative solutions to any position.
+      </p>
+      <p>
+        Whether I’m designing smooth user experiences or writing maintainable backend logic, I aim to create work that’s
+        both functional and beautiful.
+      </p>
+    </div>
+  </section>
 
-<section id="skills" tabindex="6" class="fade-slide visible">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>JavaScript</span>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>MongoDB</span>
-    <span>Git</span>
-    <span>REST APIs</span>
-  </div>
-</section>
+  <section id="skills" tabindex="6" class="fade-slide visible">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Angular & TypeScript</span>
+      <span>SQL</span>
+      <span>Jenkins & GitHub</span>
+      <span>SVN & WinSCP</span>
+      <span>Nginx</span>
+      <span>Node.js</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>C & C++</span>
+      <span>PostMan Tool & Insomnia</span>
+    </div>
+  </section>
 
-<section id="projects" tabindex="7" class="fade-slide visible">
-  <h2>Projects</h2>
-  <div class="project visible" tabindex="8">
-    <h3>Weather App</h3>
-    <p>A React-based app that fetches live weather data using OpenWeather API. Built with responsive design and search functionality.</p>
-    <a href="#" tabindex="9" aria-label="View Weather App Project">View Project</a>
-  </div>
-  <div class="project visible" tabindex="10">
-    <h3>Task Manager API</h3>
-    <p>RESTful Node.js backend with JWT authentication, MongoDB integration, and test coverage.</p>
-    <a href="#" tabindex="11" aria-label="View Task Manager API on GitHub">View GitHub</a>
-  </div>
-</section>
+  <section id="projects" tabindex="7" class="fade-slide visible">
+    <h2>Projects</h2>
+    <div class="project visible" tabindex="8">
+      <h3>MY ACCOUNT REVAMP PORTAL in HDFC Bank - TATA CONSULTANCY SERVICES</h3>
+      <p>Working on application for HDFC Life Insurance domain.Making responsive and user interaction single page
+        application with Agile process.Started career as frontend developer in HDFC Life Insurance customer portal and
+        still working.
+      </p>
+      <p>Responsible for full SDLC of end-customer facing Angular
+        application which is used by millions of life insurance
+        policy holders.Leveraged Angular 13, HTML5, Angular Material
+        Components, RxJS frameworks to implement responsive
+        modern user experiences.
+      </p>
+      <p>Implemented lazy loading, AOT compilation, and implemented several custom directives and pipes to
+        promote code reuse and readability.Used pdfjs package to generate pdf files of web pages.
+        Instrumental in Angular version upgrades and build issues.</p>
+      <p>Integrated Google and Adobe analytics scripts to enable
+        website usage analytics.
+        Utilized Jenkins for repeatable and predictable
+        deployments and Checkmarx tool for static analysis of
+        InfoSec vulnerabilities.</p>
+      <p>
+        Configured path rewrites, path forwarding, response
+        headers in Nginx web server.
+        Collaborated with multiple vendor, application and
+        support teams to deliver seamless value to customer.
+        Integration of customer portal with mobile app through
+        single sign on process.
+      </p>
+      <a href="https://myaccount.hdfclife.com" target="_blank" tabindex="9" aria-label="View MY ACCOUNT REVAMP PORTAL Project">View Project</a>
+    </div>
+    <div class="project visible" tabindex="10">
+      <h3>Federal Express Corp</h3>
+      <p>RESTful Node.js backend with JWT authentication, MongoDB integration, and test coverage.</p>
+      <a href="https://www.fedex.com/secure-login/en-in/#/credentials" target="_blank" tabindex="11" aria-label="Fedex Shipment Tracking">View Project</a>
+    </div>
+  </section>
 
-<section id="education" tabindex="7" class="fade-slide visible">
-  <h2>Education</h2>
-  <div class="project visible" tabindex="8">
-    <h3>Weather App</h3>
-    <p>A React-based app that fetches live weather data using OpenWeather API. Built with responsive design and search functionality.</p>
-    <a href="#" tabindex="9" aria-label="View Weather App Project">View Project</a>
-  </div>
-  <div class="project visible" tabindex="10">
-    <h3>Task Manager API</h3>
-    <p>RESTful Node.js backend with JWT authentication, MongoDB integration, and test coverage.</p>
-    <a href="#" tabindex="11" aria-label="View Task Manager API on GitHub">View GitHub</a>
-  </div>
-</section>
+  <section id="education" tabindex="7" class="fade-slide visible">
+    <h2>Education</h2>
+    <div class="project visible" tabindex="8">
+      <h3>Higher Secondary Certificate</h3>
+      <p>DR.NATARAJAN MATRIC HIGHER SECONDARY SCHOOL</p>
+      <p>2015 - 2016</p>
+      <p>Higher Secondary Certificate in Science - 89%</p>
+    </div>
+    <div class="project visible" tabindex="10">
+      <h3>Bachelor of Engineering</h3>
+      <p>RAJALAKSHMI ENGINEERING COLLEGE</p> 
+      <p>2016 - 2020</p>
+      <p>Bachelor of Engineering in Civil Engineering - 75%</p>
+    </div>
+  </section>
 
-<section id="contact" tabindex="12" class="fade-slide visible">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:unish@example.com" style="color: var(--accent-color)">unish&#64;example.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/unishkumar" target="_blank" rel="noopener" style="color: var(--accent-color)">/in/unishkumar</a></p>
-  <p>GitHub: <a href="https://github.com/unishkumar" target="_blank" rel="noopener" style="color: var(--accent-color)">unishkumar</a></p>
-</section>
+  <section id="contact" tabindex="12" class="fade-slide visible">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:unishkumar@gmail.com" style="color: var(--accent-color)">unishkumar9626&#64;gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/unishkumar" target="_blank" rel="noopener"
+        style="color: var(--accent-color)">/in/unishkumar</a></p>
+    <p>GitHub: <a href="https://github.com/unishkumar" target="_blank" rel="noopener"
+        style="color: var(--accent-color)">unishkumar</a></p>
+    <p>Mobile: <a href="tel:+919626172029" style="color: var(--accent-color)">+91 96261 72029</a></p>  
+
+  </section>
 </main>
- 
+
 <footer>
-<p>&copy; 2025 Unish Kumar. All rights reserved.</p>
+  <p>&copy; 2025 Unish Kumar V. Web Developer.</p>
 </footer>
