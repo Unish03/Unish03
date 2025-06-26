@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './screens/login/login.component';
 import { ProfileComponent } from './screens/profile/profile.component';
 import { ResumeComponent } from './resume/resume.component';
+import { UiListComponent } from './screens/front-end/ui-list/ui-list.component';
 
 const routeConfig: Routes = [
     {
@@ -19,6 +20,11 @@ const routeConfig: Routes = [
       component: ResumeComponent,
       title: 'Resume',
     },
+    {
+      path: 'frontend',
+      component: UiListComponent,
+      title: 'Frontend',
+    }
   ];
 export default routeConfig; 
 

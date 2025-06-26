@@ -1,0 +1,17 @@
+.ui-list {
+    color: #000;
+}
+::ng-deep .ui-list .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+    background-color: transparent;
+    color: rgb(227, 129, 80) !important;
+    font-weight: 600;
+}
+::ng-deep .ui-list .mat-mdc-tab.mdc-tab .mdc-tab__text-label {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+::ng-deep .ui-list .mat-mdc-tab-labels {
+    border-radius: 3px;
+    margin-right: 15px;
+}

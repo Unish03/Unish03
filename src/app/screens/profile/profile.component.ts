@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../shared/shared.module';
-import { PersonalDetailsComponent } from '../personal-details/personal-details.component';
+import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 
 @Component({
   selector: 'app-profile',
