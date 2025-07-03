@@ -3,6 +3,7 @@ import { LoginComponent } from './screens/login/login.component';
 import { ProfileComponent } from './screens/profile/profile.component';
 import { ResumeComponent } from './resume/resume.component';
 import { UiListComponent } from './screens/front-end/ui-list/ui-list.component';
+import { CheatSheetHtmlComponent } from './screens/front-end/cheat-sheet-html/cheat-sheet-html.component';
 
 const routeConfig: Routes = [
     {
@@ -24,6 +25,11 @@ const routeConfig: Routes = [
       path: 'frontend',
       component: UiListComponent,
       title: 'Frontend',
+    },
+    {
+      path: 'cheat-sheet-html',
+      component: CheatSheetHtmlComponent,
+      title: 'Cheat Sheet HTML',
     }
   ];
 export default routeConfig; 

@@ -3,7 +3,8 @@ import { SharedModule } from '../../../shared/shared.module';
 
 @Component({
   selector: 'app-angular',
-  imports: [SharedModule],
+  imports: [SharedModule
+  ],
   templateUrl: './angular.component.html',
   styleUrl: './angular.component.css'
 })

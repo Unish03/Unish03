@@ -34,4 +34,15 @@ export class ResumeComponent implements AfterViewInit {
       this.renderer.removeClass(document.body, 'menu-open');
     }
   }
+  submitFeedback(){
+    const input = document.querySelector('input[type="text"]') as HTMLInputElement;
+    if (input && input.value) {
+      const utterance = new SpeechSynthesisUtterance(`Feedback received: ${input.value}`);
+      speechSynthesis.speak(utterance);
+      input.value = ''; // Clear the input field after submission
+    } else {
+      const utterance = new SpeechSynthesisUtterance(`Feedback input is empty`);
+      speechSynthesis.speak(utterance);
+    }
+  }
 }
