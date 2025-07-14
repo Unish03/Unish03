@@ -11,7 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 export class ResumeComponent implements AfterViewInit {
   isMenuOpen = false;
 
-  constructor(private viewportScroller: ViewportScroller,private renderer: Renderer2) { }
+  constructor(private viewportScroller: ViewportScroller, private renderer: Renderer2) { }
 
   ngOnInit() {
     // Get elements by IDs with proper typing
@@ -21,7 +21,7 @@ export class ResumeComponent implements AfterViewInit {
   }
   scrollToTop(id: string): void {
     this.viewportScroller.scrollToAnchor(id);
-        if (this.isMenuOpen) {
+    if (this.isMenuOpen) {
       this.isMenuOpen = false;
       this.renderer.removeClass(document.body, 'menu-open');
     }
@@ -34,7 +34,7 @@ export class ResumeComponent implements AfterViewInit {
       this.renderer.removeClass(document.body, 'menu-open');
     }
   }
-  submitFeedback(){
+  submitFeedback() {
     const input = document.querySelector('input[type="text"]') as HTMLInputElement;
     if (input && input.value) {
       const utterance = new SpeechSynthesisUtterance(`Feedback received: ${input.value}`);

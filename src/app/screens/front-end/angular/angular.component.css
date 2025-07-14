@@ -20,3 +20,6 @@
 ::ng-deep .angular-content .mat-mdc-tab .mdc-tab-indicator__content--underline {
     border: 1px solid rgb(227, 129, 80);
 }
+.question {
+    font-weight: bold;
+}

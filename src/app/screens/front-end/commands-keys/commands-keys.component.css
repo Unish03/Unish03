@@ -1,0 +1,36 @@
+.shortcut-list {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 1em;
+}
+.shortcut-list h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.shortcut-list section {
+    margin-bottom: 2em;
+}
+.shortcut-list h3 {
+    background: #f3f3f3;
+    padding: 0.5em;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+}
+.shortcut-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.shortcut-list td {
+    padding: 0.4em 0.8em;
+    border-bottom: 1px solid #eee;
+}
+.shortcut-list td:first-child {
+    font-weight: bold;
+    width: 220px;
+    color: #2d6cdf;
+    white-space: nowrap;
+}
+.shortcut-list tr:last-child td {
+    border-bottom: none;
+}

@@ -347,16 +347,7 @@ footer {
     background: #ec1717;
     transform: scale(1.05);
 }
-.profile-image-container {
-    background-image: url('/src/assets/images/pickachu.png');
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-}
-.profile-image-container .profile-image {
-    width: 100%;
-    height: auto;
-}
+
 
 /* Mobile nav styles */
 

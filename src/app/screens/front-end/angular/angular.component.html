@@ -1,63 +1,84 @@
-<div class="angular-content">
-            <mat-tab-group animationDuration="0ms">
-            <mat-tab label="Tab 1">
-                <ng-template mat-tab-label>
-                    <p>Basic</p>
-                </ng-template>
-            <ng-template matTabContent>
-                    <p>Angular is a web framework that empowers developers to build fast, reliable applications. Angular uses Typescript.</p>
-                    <p>Angular is a TypeScript-based front-end web application framework. It targets both the browser and the server. Angular is one of the most popular frameworks for UI design today, with hundreds of thousands of developers. It is maintained by Google, and its primary function is to design single-page applications. It allows developers to create large, maintainable applications.</p>
-                    <p>Angular supports bidirectional data binding as well as mutable data. The biggest benefit of Angular is that it enables dependency injection. Angular can be used in both mobile and web development. Angular features a wide wide range of tools, libraries, frameworks, plugins, and so on that make development faster and more fun.</p>
-                    <p>Angular is a free, open-source, TypeScript-based framework for front-end development maintained by Google. It is popular for single-page applications but is also used to build enterprise-level web applications, progressive web applications (PWAs), and mobile apps. Client-side frameworks like Angular were introduced to provide a more responsive user experience. It provides various tools, APIs, and libraries to streamline development. Angular’s features, such as lazy loading, AoT, and change detection, improve performance and speed up loading times. Data from BuiltWith shows that over 690,000 websites have historically used Angular, and 246,000+ websites currently use it.</p>
-                    <a href="https://angular.dev/" target="_blank">Learn more about Angular</a>
-            </ng-template>
-            </mat-tab>
-        <mat-tab label="Tab 2">
+<div class="angular-content" style="margin:auto;padding:10px;">
+    <mat-tab-group animationDuration="0ms" mat-stretch-tabs color="primary">
+        <mat-tab>
             <ng-template mat-tab-label>
-                <p>About HTML CSS & JavaScript</p>
+                <mat-icon>info</mat-icon>
+                <span style="margin-left:8px;">Basic</span>
             </ng-template>
             <ng-template matTabContent>
-                <p>This is the content for Tab 2.</p>
-                <a href="/cheat-sheet-html" target="_blank">Learn more about HTML & CSS</a>
+                <section style="padding:24px;">
+                    <h2 style="margin-bottom:12px;">What is Angular?</h2>
+                    <p>
+                        Angular is a TypeScript-based front-end web application framework maintained by Google. It empowers developers to build fast, reliable single-page and enterprise-level applications for both web and mobile.
+                    </p>
+                    <ul style="margin:16px 0 16px 24px;">
+                        <li>Supports bidirectional data binding and dependency injection</li>
+                        <li>Offers tools, libraries, and plugins for rapid development</li>
+                        <li>Features like lazy loading, AoT, and change detection improve performance</li>
+                        <li>Used by over 246,000 websites currently</li>
+                    </ul>
+                    <a mat-raised-button color="accent" href="https://angular.dev/" target="_blank" rel="noopener">Learn more about Angular</a>
+                </section>
             </ng-template>
         </mat-tab>
-        <mat-tab label="Tab 3">
+        <mat-tab>
             <ng-template mat-tab-label>
-                <p>Examples</p>
+                <mat-icon>code</mat-icon>
+                <span style="margin-left:8px;">HTML, CSS & JS</span>
             </ng-template>
             <ng-template matTabContent>
-                <p>This is the content for Tab 3.</p>
+                <section style="padding:24px;">
+                    <h2 style="margin-bottom:12px;">HTML, CSS & JavaScript</h2>
+                    <p>
+                        HTML, CSS, and JavaScript are the core technologies for building web pages and applications.
+                    </p>
+                    <a mat-raised-button color="accent" href="/cheat-sheet-html" target="_blank" rel="noopener">Learn more about HTML & CSS</a>
+                </section>
             </ng-template>
         </mat-tab>
-        <mat-tab label="Tab 4">
+        <mat-tab>
             <ng-template mat-tab-label>
-                <p>Interview Questions</p>
+                <mat-icon>lightbulb</mat-icon>
+                <span style="margin-left:8px;">Examples</span>
             </ng-template>
             <ng-template matTabContent>
-                <p>1. What is Angular? Why was it introduced?</p>
-                <p>Angular is an open-source web application framework for building dynamic, single-page applications (SPAs) with highly intuitive user interfaces. It encompasses 2-way data binding, component-based architecture, and dependency injection. Angular was introduced to create SPAs, bring structure and consistency to web applications, and provide excellent scalability and maintainability.</p>
-
-                <p>2. What is TypeScript?</p>
-                <p>TypeScript is a programming language that builds on JavaScript by adding extra features to make it powerful and easy to use. Its potential is implemented especially in large projects. TypeScript allows developers to define the data type that the variables should hold. Furthermore, it helps identify errors during development, making debugging easier.</p>
-
-                <p>3. What is Data Binding in Angular? Which type of Data Binding does Angular deploy?</p>
-                <p>Data binding allows any internet user to manipulate web page elements using a web browser. It uses dynamic HTML and does not require complex scripting or programming. Data binding in Angular is commonly used in web pages that contain interactive components such as forms, calculators, tutorials, and games. Incremental display of a webpage makes data binding convenient when pages have enormous amounts of data. The four types of data binding include Interpolation, Property Binding, Event Binding, and Two-Way Binding.</p>
-
-                <p>4. What are Single Page Applications (SPAs)?</p>
-                <p>A SPA or single-page application loads a single web page and dynamically updates it as the user interacts with it.
-                Unlike traditional websites, an SPA only loads the main page once. After that, it updated parts of the page without needing to refresh the whole page. SPAs are faster, more responsive, and provide a seamless experience to users.</p>
-               
-                <p>5. Differentiate between Angular and AngularJS</p>
-                <p>Google developed Angular and AngularJS frameworks for building web applications, but they differ significantly. AngularJS is the original version, built with JavaScript, whereas Angular (often called Angular 2+) is a complete rewrite, built with TypeScript, offering better performance, enhanced features, and more flexibility. Angular uses a component-based architecture, while AngularJS uses a directive-based approach. Angular also provides more advanced tools for handling forms, routing, and HTTP requests, making it more suited for modern, large-scale applications.</p>
+                <section style="padding:24px;">
+                    <p>This is the content for Tab 3.</p>
+                </section>
             </ng-template>
         </mat-tab>
-        <mat-tab label="Tab 5">
+        <mat-tab>
             <ng-template mat-tab-label>
-                <p>Commands</p>
+                <mat-icon>question_answer</mat-icon>
+                <span style="margin-left:8px;">Interview Qs</span>
             </ng-template>
             <ng-template matTabContent>
-                <p>This is the content for Tab 5.</p>
+                <section style="padding:24px;">
+                    <app-interview-questions></app-interview-questions>
+                </section>
             </ng-template>
         </mat-tab>
-        </mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>terminal</mat-icon>
+                <span style="margin-left:8px;">Commands</span>
+            </ng-template>
+            <ng-template matTabContent>
+                <section style="padding:24px;">
+                    <app-commands-keys></app-commands-keys>
+                </section>
+            </ng-template>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>developer_board</mat-icon>
+                <span style="margin-left:8px;">Console Methods</span>
+            </ng-template>
+            <ng-template matTabContent>
+                <section style="padding:24px;">
+                    <app-console-methods></app-console-methods>
+                </section>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
 </div>

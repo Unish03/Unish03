@@ -1,0 +1,32 @@
+.commands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+.command-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+.command-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.command-icon {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+    color: #0078d4;
+}
+.command-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.command-desc {
+    font-size: 0.98em;
+    color: #555;
+}

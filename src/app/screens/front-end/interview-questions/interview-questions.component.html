@@ -1,0 +1,72 @@
+<div class="questions-container" style="max-width: 800px; margin: 2rem auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 2rem;">
+    <h2 style="text-align:center; margin-bottom:2rem; color:#1976d2;">Angular Interview Questions</h2>
+    <ol style="padding-left: 1.2rem;">
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What is Angular? Why was it introduced?</p>
+            <p>Angular is an open-source web application framework for building dynamic, single-page applications (SPAs) with highly intuitive user interfaces. It encompasses 2-way data binding, component-based architecture, and dependency injection. Angular was introduced to create SPAs, bring structure and consistency to web applications, and provide excellent scalability and maintainability.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What is TypeScript?</p>
+            <p>TypeScript is a programming language that builds on JavaScript by adding extra features to make it powerful and easy to use. Its potential is implemented especially in large projects. TypeScript allows developers to define the data type that the variables should hold. Furthermore, it helps identify errors during development, making debugging easier.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What is Data Binding in Angular? Which type of Data Binding does Angular deploy?</p>
+            <p>Data binding allows any internet user to manipulate web page elements using a web browser. It uses dynamic HTML and does not require complex scripting or programming. Data binding in Angular is commonly used in web pages that contain interactive components such as forms, calculators, tutorials, and games. Incremental display of a webpage makes data binding convenient when pages have enormous amounts of data. The four types of data binding include <b>Interpolation</b>, <b>Property Binding</b>, <b>Event Binding</b>, and <b>Two-Way Binding</b>.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What are Single Page Applications (SPAs)?</p>
+            <p>A SPA or single-page application loads a single web page and dynamically updates it as the user interacts with it. Unlike traditional websites, an SPA only loads the main page once. After that, it updates parts of the page without needing to refresh the whole page. SPAs are faster, more responsive, and provide a seamless experience to users.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">Differentiate between Angular and AngularJS</p>
+            <p>Google developed Angular and AngularJS frameworks for building web applications, but they differ significantly. AngularJS is the original version, built with JavaScript, whereas Angular (often called Angular 2+) is a complete rewrite, built with TypeScript, offering better performance, enhanced features, and more flexibility. Angular uses a component-based architecture, while AngularJS uses a directive-based approach. Angular also provides more advanced tools for handling forms, routing, and HTTP requests, making it more suited for modern, large-scale applications.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What are Decorators in Angular?</p>
+            <p>Decorators are special markers (aka functions) that add metadata to classes, methods, properties, and parameters. They provide Angular with information about how to treat or use those elements in the code. Common Angular decorators include <code>&#64;Component</code>, <code>&#64;Injectable</code>, and <code>&#64;NgModule</code>.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What are the popular advantages of Angular?</p>
+            <ul style="background:#f5f5f5; border-radius:8px; padding:1rem;">
+                <li>Angular is a full-fledged framework that provides a firm opinion on how the application should be structured.</li>
+                <li>MVC Architecture: Angular is a full-fledged MVC framework that provides a firm opinion on how the application should be structured. It also offers bidirectional data flow and updates the real DOM.</li>
+                <li>Modules: Angular consists of different design patterns, such as components, directives, pipes, and services, which help create applications smoothly.</li>
+                <li>Dependency Injection: Components dependent on other components can be easily worked around using this feature.</li>
+            </ul>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What are Templates in Angular?</p>
+            <p>Templates in Angular are the HTML views that define the structure and layout of what users see in the web browser.</p>
+            <p>Though they are like HTML files, templates can also include special Angular code to make web pages dynamic and interactive. Within the Templates, developers can use Angular features such as data binding, loops, and conditionals based on user interaction and data patterns.</p>
+            <p>For example, in a template, a list of items is shown like this:</p>
+            <pre style="background:#f5f5f5; border-radius:6px; padding:1rem;"><code>&lt;ul&gt;
+    &lt;li *ngFor="item"&gt; &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+            <p>Here, the <code>*ngFor</code> directive tells Angular to loop over a list of items and display each item's name property.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What are Annotations in Angular?</p>
+            <p>Annotations in Angular are similar to decorators. They are attached to classes, methods, or properties to provide metadata. This metadata informs Angular about how to treat those classes.</p>
+            <p>For example, in Angular, you might see an annotation like this:</p>
+            <pre style="background:#f5f5f5; border-radius:6px; padding:1rem;">          <code>&#64;Component({{'{'}}<br />
+                selector: 'app-header',<br />
+                templateUrl: './header.component.html',<br />
+                styleUrls: ['./header.component.css']<br />
+                {{'}'}});</code></pre>
+            <p>Here, <code>&#64;Component</code> is an annotation that marks the HeaderComponent class as an Angular component and provides additional information, such as the template and associated styles.</p>
+        </li>
+        <li>
+            <p class="question" style="font-weight:600; color:#1976d2;">What are Components in Angular?</p>
+            <p>Components in Angular are the building blocks of the application. They encapsulate the template and logic for a specific part of the user interface. Each component consists of three main parts:</p>
+            <ul style="background:#f5f5f5; border-radius:8px; padding:1rem;">
+                <li><b>Template:</b> The HTML template that defines the structure and layout of the component's view.</li>
+                <li><b>Styles:</b> The CSS styles that define the visual appearance of the component.</li>
+                <li><b>Logic:</b> The TypeScript code that controls the behavior and functionality of the component.</li>
+            </ul>
+            <p>For example, in Angular, you might have a component like this:</p>
+            <pre style="background:#f5f5f5; border-radius:6px; padding:1rem;"><code>&lt;app-header&gt;&lt;/app-header&gt;</code></pre>
+            <p>Here, the <code>&lt;app-header&gt;</code> element is a component that displays a header.</p>
+        </li>
+    </ol>
+</div>
