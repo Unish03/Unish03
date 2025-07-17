@@ -44,7 +44,12 @@
                 <p>Java</p>
             </ng-template>
             <ng-template matTabContent>
-                <p>This is the content for Tab 5.</p>
+                    <ol style="padding-left: 1.2rem;">
+        <li *ngFor="let item of questions">
+            <p class="question" style="font-weight:600; color:#1976d2;">{{ item.question }}</p>
+            <p [innerHTML]="item.answer"></p>
+        </li>
+        </ol>
             </ng-template>
         </mat-tab>
         </mat-tab-group>
