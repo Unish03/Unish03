@@ -1,12 +1,33 @@
 <header>
-  <h1>Unish Kumar V</h1>
-  <nav id="primary-navigation" role="navigation" [class.open]="isMenuOpen">
-    <a (click)="scrollToTop('about')" tabindex="1">About</a>
-    <a (click)="scrollToTop('skills')" tabindex="2">Skills</a>
-    <a (click)="scrollToTop('projects')" tabindex="3">Projects</a>
-    <a (click)="scrollToTop('education')" tabindex="4">Education</a>
-    <a (click)="scrollToTop('contact')" tabindex="5">Contact</a>
-  </nav>
+  <div class="profile-container" style="display: flex; justify-content: center;flex-direction: row;">
+    <div class="flip-container" style="perspective: 600px;margin-right: 10px;">
+      <div class="flipper" style="transition: 0.6s; transform-style: preserve-3d;">
+        <div class="front" style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px;">
+          <img src="assets/images/profile.png" alt="Unish Kumar V" class="profile-img"
+            style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />
+        </div>
+        <div class="back"
+          style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f5f5f5;">
+          <img src="assets/images/background.png" alt="Unish Kumar V" class="profile-img"
+            style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />        </div>
+      </div>
+    </div>
+    <div>
+      <h1 class="animated-heading">Unish Kumar V</h1>
+      <div class="blowing-text">
+        Driven By Passion, Driven By Curiosity, Powered By Code 🚀
+      </div>
+      <div>
+      <nav id="primary-navigation" role="navigation" [class.open]="isMenuOpen">
+        <a (click)="scrollToTop('about')" tabindex="1">About</a>
+        <a (click)="scrollToTop('skills')" tabindex="2">Skills</a>
+        <a (click)="scrollToTop('projects')" tabindex="3">Projects</a>
+        <a (click)="scrollToTop('education')" tabindex="4">Education</a>
+        <a (click)="scrollToTop('contact')" tabindex="5">Contact</a>
+      </nav>
+      </div>
+    </div>
+  </div>
 </header>
 <button id="menu-toggle" aria-label="Toggle navigation menu" [attr.aria-expanded]="isMenuOpen"
   aria-controls="primary-navigation" (click)="toggleMenu()" class="menu-toggle">
@@ -40,59 +61,79 @@
     <h2>Skills</h2>
     <div class="skills">
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular"
+          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
         Angular
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+          alt="TypeScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
         TypeScript
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="24"
+          height="24" style="vertical-align:middle; margin-right:6px;">
         SQL
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
         JavaScript
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Jenkins &amp; 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"
+          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        Jenkins &amp;
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="24"
+          height="24" style="vertical-align:middle; margin-right:6px;">
         GitHub
       </span>
       <span>
-        <img src="https://tortoisesvn.net/docs/release/TortoiseSVN_en/images/Tortoise.png" alt="Tortoise SVN" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Tortoise SVN &amp; 
-        <img src="https://winscp-static-746341.c.cdn77.org/assets/images/logos/logo@2x.png?v=102" alt="WinSCP" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        Playwright
+      </span>
+      <span>
+        <img src="https://tortoisesvn.net/docs/release/TortoiseSVN_en/images/Tortoise.png" alt="Tortoise SVN" width="24"
+          height="24" style="vertical-align:middle; margin-right:6px;">
+        Tortoise SVN &amp;
+        <img src="https://winscp-static-746341.c.cdn77.org/assets/images/logos/logo@2x.png?v=102" alt="WinSCP"
+          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
         WinSCP
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" width="24"
+          height="24" style="vertical-align:middle; margin-right:6px;">
         Nginx
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
         Node.js
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="24"
+          height="24" style="vertical-align:middle; margin-right:6px;">
         HTML
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="24"
+          height="24" style="vertical-align:middle; margin-right:6px;">
         CSS
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        C &amp; 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" width="24" height="24"
+          style="vertical-align:middle; margin-right:6px;">
+        C &amp;
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"
+          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
         C++
       </span>
       <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Postman Tool &amp; 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/insomnia/insomnia-original.svg" alt="Insomnia" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"
+          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+        Postman Tool &amp;
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/insomnia/insomnia-original.svg" alt="Insomnia"
+          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
         Insomnia
       </span>
     </div>
@@ -128,12 +169,15 @@
         Integration of customer portal with mobile app through
         single sign on process.
       </p>
-      <a href="https://myaccount.hdfclife.com" target="_blank" tabindex="9" aria-label="View MY ACCOUNT REVAMP PORTAL Project">View Project</a>
+      <a href="https://myaccount.hdfclife.com" target="_blank" tabindex="9"
+        aria-label="View MY ACCOUNT REVAMP PORTAL Project">View Project</a>
     </div>
     <div class="project visible" tabindex="10">
       <h3>Federal Express Corp</h3>
-      <p>RESTful Node.js backend with JWT authentication, MongoDB integration, and test coverage.</p>
-      <a href="https://www.fedex.com/secure-login/en-in/#/credentials" target="_blank" tabindex="11" aria-label="Fedex Shipment Tracking">View Project</a>
+      <p>Implemented FedEx Dynamic Pricing feature to provide real-time shipping rates based on package details, destination, and delivery speed, enhancing user experience and cost transparency.</p>
+      <p>RESTful Node.js backend with JWT authentication, SQL integration, and automation testing coverage.</p>
+      <a href="https://www.fedex.com/secure-login/en-in/#/credentials" target="_blank" tabindex="11"
+        aria-label="Fedex Shipment Tracking">View Project</a>
     </div>
   </section>
 
@@ -147,7 +191,7 @@
     </div>
     <div class="project visible" tabindex="10">
       <h3>Bachelor of Engineering</h3>
-      <p>RAJALAKSHMI ENGINEERING COLLEGE</p> 
+      <p>RAJALAKSHMI ENGINEERING COLLEGE</p>
       <p>2016 - 2020</p>
       <p>Bachelor of Engineering in Civil Engineering - 75%</p>
     </div>
@@ -156,16 +200,17 @@
   <section id="contact" tabindex="12" class="fade-slide visible">
     <h2>Contact</h2>
     <div class="project visible" tabindex="8">
-    <p>Email: <a href="mailto:unishkumar@gmail.com" style="color: var(--accent-color)">unishkumar9626&#64;gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/unish-kumar-v/" target="_blank" rel="noopener"
-        style="color: var(--accent-color)">https://www.linkedin.com/in/unish-kumar-v/</a></p>
-    <p>GitHub: <a href="https://github.com/unishkumar" target="_blank" rel="noopener"
-        style="color: var(--accent-color)">unishkumar</a></p>
-    <p>Mobile: <a href="tel:+919626172029" style="color: var(--accent-color)">+91 96261 72029</a></p>  
+      <p>Email: <a href="mailto:unishkumar@gmail.com"
+          style="color: var(--accent-color)">unishkumar9626&#64;gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/unish-kumar-v/" target="_blank" rel="noopener"
+          style="color: var(--accent-color)">https://www.linkedin.com/in/unish-kumar-v/</a></p>
+      <p>GitHub: <a href="https://github.com/unishkumar" target="_blank" rel="noopener"
+          style="color: var(--accent-color)">unishkumar</a></p>
+      <p>Mobile: <a href="tel:+919626172029" style="color: var(--accent-color)">+91 96261 72029</a></p>
     </div>
   </section>
 
-  <section id = "feedback" tabindex="13" class="fade-slide visible">
+  <section id="feedback" tabindex="13" class="fade-slide visible">
     <h2>Feedback</h2>
     <p>Feel free to reach out for any feedback or suggestions. Your input is valuable!</p>
     <span class="input-box">
@@ -181,5 +226,3 @@
 <footer>
   <p>&copy; 2025 Unish Kumar V. Web Developer | All rights reserved</p>
 </footer>
-
-

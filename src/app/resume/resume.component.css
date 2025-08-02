@@ -265,6 +265,7 @@ footer {
     position: fixed;
     text-align: justify;
 }
+
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -274,65 +275,75 @@ footer {
     transition: all 0.3s ease;
     position: fixed;
 }
+
 .hamburger {
     width: 100%;
     top: 12px;
 }
+
 .hamburger::before,
 .hamburger::after {
     /* position: absolute; */
     width: 100%;
 }
+
 .hamburger::before {
     top: -8px;
 }
+
 .hamburger::after {
     top: 8px;
 }
+
 /* When menu is open, animate hamburger to X */
 .hamburger.open {
     background-color: transparent;
 }
+
 .hamburger.open::before {
     transform: rotate(45deg);
     top: 0;
 }
+
 .hamburger.open::after {
     transform: rotate(-45deg);
     top: 0;
 }
+
 .input-box .user-box {
-  position: relative;
+    position: relative;
 }
 
 .input-box .user-box input {
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-.input-box .user-box label {
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
 }
 
-.input-box .user-box input:focus ~ label,
-.input-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
+.input-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
 }
+
+.input-box .user-box input:focus~label,
+.input-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
 .submit-button {
     background: #03e9f4;
     color: #fff;
@@ -343,6 +354,7 @@ footer {
     font-size: 16px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
+
 .submit-button:hover {
     background: #ec1717;
     transform: scale(1.05);
@@ -353,7 +365,7 @@ footer {
 
 @media (max-width: 600px) {
     nav {
-position: fixed;
+        position: fixed;
         top: 0;
         right: 0;
         height: 57vh;
@@ -368,13 +380,16 @@ position: fixed;
         transition: transform 0.3s ease;
         z-index: 1050;
     }
+
     nav.open {
         transform: translateX(0);
     }
+
     nav a {
         font-size: 1.3em;
         padding: 10px 1.5em;
     }
+
     .menu-toggle {
         display: block;
     }
@@ -384,4 +399,61 @@ position: fixed;
 
 body.menu-open {
     overflow: hidden;
+}
+
+.flip-container {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    display: inline-block;
+}
+
+.flipper {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.blowing-text {
+    display: inline-block;
+    background-size: 200% auto;
+    font-size: 14px;
+    margin: 11px;
+    font-weight: 500;
+    line-height: 21px;
+    animation: blowing 2.5s linear infinite;
+}
+
+@keyframes blowing {
+    0% {
+        background-position: 0% center;
+        transform: scale(1) translateY(0);
+        opacity: 1;
+        text-shadow: rgb(0, 190, 174) 0px 0px 3.44852px, rgb(0, 190, 174) 0px 0px 10.897px, rgba(0, 255, 225, 0.09) 0px 0px 2.69114px, rgba(0, 255, 225, 0.09) 0px 0px 3.58819px;
+    }
+
+    40% {
+        background-position: 100% center;
+        transform: scale(1.05) translateY(-2px);
+        color: #2196f3;
+        opacity: 0.95;
+    }
+
+    60% {
+        background-position: 100% center;
+        transform: scale(1.08) translateY(-4px);
+        color: #4caf50;
+        opacity: 0.92;
+    }
+
+    100% {
+        background-position: 0% center;
+        transform: scale(1) translateY(0);
+        color: #e91e63;
+        opacity: 1;
+    }
 }
