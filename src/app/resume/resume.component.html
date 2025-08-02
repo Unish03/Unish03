@@ -1,228 +1,301 @@
-<header>
-  <div class="profile-container" style="display: flex; justify-content: center;flex-direction: row;">
-    <div class="flip-container" style="perspective: 600px;margin-right: 10px;">
-      <div class="flipper" style="transition: 0.6s; transform-style: preserve-3d;">
-        <div class="front" style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px;">
-          <img src="assets/images/profile.png" alt="Unish Kumar V" class="profile-img"
-            style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />
+<div class="resume-container">
+  <header>
+    <div class="profile-container" style="display: flex; justify-content: center;flex-direction: row;">
+      <div class="flip-container" style="perspective: 600px;margin-right: 10px;">
+        <div class="flipper" style="transition: 0.6s; transform-style: preserve-3d;">
+          <div class="front" style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px;">
+            <img src="assets/images/profile.png" alt="Unish Kumar V" class="profile-img"
+              style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />
+          </div>
+          <div class="back"
+            style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f5f5f5;">
+            <img src="assets/images/background.png" alt="Unish Kumar V" class="profile-img"
+              style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />
+          </div>
         </div>
-        <div class="back"
-          style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f5f5f5;">
-          <img src="assets/images/background.png" alt="Unish Kumar V" class="profile-img"
-            style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />        </div>
-      </div>
-    </div>
-    <div>
-      <h1 class="animated-heading">Unish Kumar V</h1>
-      <div class="blowing-text">
-        Driven By Passion, Driven By Curiosity, Powered By Code 🚀
       </div>
       <div>
-      <nav id="primary-navigation" role="navigation" [class.open]="isMenuOpen">
-        <a (click)="scrollToTop('about')" tabindex="1">About</a>
-        <a (click)="scrollToTop('skills')" tabindex="2">Skills</a>
-        <a (click)="scrollToTop('projects')" tabindex="3">Projects</a>
-        <a (click)="scrollToTop('education')" tabindex="4">Education</a>
-        <a (click)="scrollToTop('contact')" tabindex="5">Contact</a>
-      </nav>
+        <h1 class="animated-heading">Unish Kumar V <a href="assets/Unish_Kumar_V.pdf" target="_blank" rel="noopener"
+            style="color: var(--accent-color);text-decoration: none;" title="Download Resume">🚀</a></h1>
+        <div class="blowing-text">
+          Driven By Passion, Driven By Curiosity, Powered By Code
+        </div>
+        <div>
+          <nav id="primary-navigation" role="navigation" [class.open]="isMenuOpen">
+            <a (click)="scrollToTop('about')" tabindex="1">About</a>
+            <a (click)="scrollToTop('skills')" tabindex="2">Skills</a>
+            <a (click)="scrollToTop('projects')" tabindex="3">Projects</a>
+            <a (click)="scrollToTop('education')" tabindex="4">Education</a>
+            <a (click)="scrollToTop('contact')" tabindex="5">Contact</a>
+          </nav>
+        </div>
+        <div style="margin-top: 10px;">
+          <button id="theme-toggle" (click)="toggleTheme()" aria-label="Toggle Dark/Light Mode"
+            class="toggle-dark-mode">
+            <span *ngIf="!isDarkMode">🌙 Dark Mode</span>
+            <span *ngIf="isDarkMode">☀️ Light Mode</span>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</header>
-<button id="menu-toggle" aria-label="Toggle navigation menu" [attr.aria-expanded]="isMenuOpen"
-  aria-controls="primary-navigation" (click)="toggleMenu()" class="menu-toggle">
-  <span class="hamburger" [class.open]="isMenuOpen"> <mat-icon>home</mat-icon></span>
-</button>
-<main>
-  <section id="about" tabindex="5" class="fade-slide visible">
-    <h2>About Me</h2>
-    <div class="project visible" tabindex="5">
-      <p>
-        I'm not just a developer — I'm a digital problem solver. From crafting pixel-perfect UIs to building scalable
-        APIs, I bring ideas to life through code.
-      </p>
-      <p>With 4 years of successfully developing interactive web applications with responsiveness, leveraging
-        cutting-edge technologies and mentoring junior developers, I have significantly improved organizational
-        scalability, user experience and UI/UX design, culminating in user satisfaction, product efficiency, and
-        improvement of client-side scripts.
-      </p>
-      <br>
-      <p>Skilled in Angular, HTML, JS, Typescript, Ngnix, Winscp and CSS, I am confident in my ability to bring valuable
-        expertise and innovative solutions to any position.
-      </p>
-      <p>
-        Whether I’m designing smooth user experiences or writing maintainable backend logic, I aim to create work that’s
-        both functional and beautiful.
-      </p>
-    </div>
-  </section>
-
-  <section id="skills" tabindex="6" class="fade-slide visible">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular"
-          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Angular
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-          alt="TypeScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        TypeScript
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="24"
-          height="24" style="vertical-align:middle; margin-right:6px;">
-        SQL
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-          alt="JavaScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        JavaScript
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"
-          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Jenkins &amp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="24"
-          height="24" style="vertical-align:middle; margin-right:6px;">
-        GitHub
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Playwright
-      </span>
-      <span>
-        <img src="https://tortoisesvn.net/docs/release/TortoiseSVN_en/images/Tortoise.png" alt="Tortoise SVN" width="24"
-          height="24" style="vertical-align:middle; margin-right:6px;">
-        Tortoise SVN &amp;
-        <img src="https://winscp-static-746341.c.cdn77.org/assets/images/logos/logo@2x.png?v=102" alt="WinSCP"
-          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        WinSCP
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" width="24"
-          height="24" style="vertical-align:middle; margin-right:6px;">
-        Nginx
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
-          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Node.js
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="24"
-          height="24" style="vertical-align:middle; margin-right:6px;">
-        HTML
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="24"
-          height="24" style="vertical-align:middle; margin-right:6px;">
-        CSS
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" width="24" height="24"
-          style="vertical-align:middle; margin-right:6px;">
-        C &amp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"
-          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        C++
-      </span>
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"
-          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Postman Tool &amp;
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/insomnia/insomnia-original.svg" alt="Insomnia"
-          width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-        Insomnia
-      </span>
-    </div>
-  </section>
-
-  <section id="projects" tabindex="7" class="fade-slide visible">
-    <h2>Projects</h2>
-    <div class="project visible" tabindex="8">
-      <h3>MY ACCOUNT REVAMP PORTAL in HDFC Bank - TATA CONSULTANCY SERVICES</h3>
-      <p>Working on application for HDFC Life Insurance domain.Making responsive and user interaction single page
-        application with Agile process.Started career as frontend developer in HDFC Life Insurance customer portal and
-        still working.
-      </p>
-      <p>Responsible for full SDLC of end-customer facing Angular
-        application which is used by millions of life insurance
-        policy holders.Leveraged Angular 13, HTML5, Angular Material
-        Components, RxJS frameworks to implement responsive
-        modern user experiences.
-      </p>
-      <p>Implemented lazy loading, AOT compilation, and implemented several custom directives and pipes to
-        promote code reuse and readability.Used pdfjs package to generate pdf files of web pages.
-        Instrumental in Angular version upgrades and build issues.</p>
-      <p>Integrated Google and Adobe analytics scripts to enable
-        website usage analytics.
-        Utilized Jenkins for repeatable and predictable
-        deployments and Checkmarx tool for static analysis of
-        InfoSec vulnerabilities.</p>
-      <p>
-        Configured path rewrites, path forwarding, response
-        headers in Nginx web server.
-        Collaborated with multiple vendor, application and
-        support teams to deliver seamless value to customer.
-        Integration of customer portal with mobile app through
-        single sign on process.
-      </p>
-      <a href="https://myaccount.hdfclife.com" target="_blank" tabindex="9"
-        aria-label="View MY ACCOUNT REVAMP PORTAL Project">View Project</a>
-    </div>
-    <div class="project visible" tabindex="10">
-      <h3>Federal Express Corp</h3>
-      <p>Implemented FedEx Dynamic Pricing feature to provide real-time shipping rates based on package details, destination, and delivery speed, enhancing user experience and cost transparency.</p>
-      <p>RESTful Node.js backend with JWT authentication, SQL integration, and automation testing coverage.</p>
-      <a href="https://www.fedex.com/secure-login/en-in/#/credentials" target="_blank" tabindex="11"
-        aria-label="Fedex Shipment Tracking">View Project</a>
-    </div>
-  </section>
-
-  <section id="education" tabindex="7" class="fade-slide visible">
-    <h2>Education</h2>
-    <div class="project visible" tabindex="8">
-      <h3>Higher Secondary Certificate</h3>
-      <p>DR.NATARAJAN MATRIC HIGHER SECONDARY SCHOOL</p>
-      <p>2015 - 2016</p>
-      <p>Higher Secondary Certificate in Science - 89%</p>
-    </div>
-    <div class="project visible" tabindex="10">
-      <h3>Bachelor of Engineering</h3>
-      <p>RAJALAKSHMI ENGINEERING COLLEGE</p>
-      <p>2016 - 2020</p>
-      <p>Bachelor of Engineering in Civil Engineering - 75%</p>
-    </div>
-  </section>
-
-  <section id="contact" tabindex="12" class="fade-slide visible">
-    <h2>Contact</h2>
-    <div class="project visible" tabindex="8">
-      <p>Email: <a href="mailto:unishkumar@gmail.com"
-          style="color: var(--accent-color)">unishkumar9626&#64;gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/unish-kumar-v/" target="_blank" rel="noopener"
-          style="color: var(--accent-color)">https://www.linkedin.com/in/unish-kumar-v/</a></p>
-      <p>GitHub: <a href="https://github.com/unishkumar" target="_blank" rel="noopener"
-          style="color: var(--accent-color)">unishkumar</a></p>
-      <p>Mobile: <a href="tel:+919626172029" style="color: var(--accent-color)">+91 96261 72029</a></p>
-    </div>
-  </section>
-
-  <section id="feedback" tabindex="13" class="fade-slide visible">
-    <h2>Feedback</h2>
-    <p>Feel free to reach out for any feedback or suggestions. Your input is valuable!</p>
-    <span class="input-box">
-      <div class="user-box">
-        <input type="text" placeholder="Give feedback" aria-label="Feedback" required>
-        <!-- <label>Your Name</label> -->
+  </header>
+  <button id="menu-toggle" aria-label="Toggle navigation menu" [attr.aria-expanded]="isMenuOpen"
+    aria-controls="primary-navigation" (click)="toggleMenu()" class="menu-toggle">
+    <span class="hamburger" [class.open]="isMenuOpen"> <mat-icon>home</mat-icon></span>
+  </button>
+  <main>
+    <section id="about" tabindex="5" class="fade-slide visible">
+      <h2>About Me</h2>
+      <div class="project visible" tabindex="5">
+        <p>
+          I'm not just a developer — I'm a digital problem solver. From crafting pixel-perfect UIs to building scalable
+          APIs, I bring ideas to life through code.
+        </p>
+        <p>With 4 years of successfully developing interactive web applications with responsiveness, leveraging
+          cutting-edge technologies and mentoring junior developers, I have significantly improved organizational
+          scalability, user experience and UI/UX design, culminating in user satisfaction, product efficiency, and
+          improvement of client-side scripts.
+        </p>
+        <br>
+        <p>Skilled in Angular, HTML, JS, Typescript, Ngnix, Winscp and CSS, I am confident in my ability to bring
+          valuable
+          expertise and innovative solutions to any position.
+        </p>
+        <p>
+          Whether I’m designing smooth user experiences or writing maintainable backend logic, I aim to create work
+          that’s
+          both functional and beautiful.
+        </p>
       </div>
-    </span>
-    <button class="submit-button" type="submit" (click)="submitFeedback()" aria-label="Submit Feedback">Submit</button>
-  </section>
-</main>
+    </section>
 
+    <section id="skills" tabindex="6" class="fade-slide visible">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          Angular
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          TypeScript
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="24"
+            height="24" style="vertical-align:middle; margin-right:6px;">
+          SQL
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          JavaScript
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          Jenkins &amp;
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          GitHub
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg"
+            alt="Playwright" width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          Playwright
+        </span>
+        <span>
+          <img src="https://tortoisesvn.net/docs/release/TortoiseSVN_en/images/Tortoise.png" alt="Tortoise SVN"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          Tortoise SVN &amp;
+          <img src="https://winscp-static-746341.c.cdn77.org/assets/images/logos/logo@2x.png?v=102" alt="WinSCP"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          WinSCP
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" width="24"
+            height="24" style="vertical-align:middle; margin-right:6px;">
+          Nginx
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          Node.js
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="24"
+            height="24" style="vertical-align:middle; margin-right:6px;">
+          HTML
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="24"
+            height="24" style="vertical-align:middle; margin-right:6px;">
+          CSS
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" width="24" height="24"
+            style="vertical-align:middle; margin-right:6px;">
+          C &amp;
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          C++
+        </span>
+        <span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          Postman Tool &amp;
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/insomnia/insomnia-original.svg" alt="Insomnia"
+            width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+          Insomnia
+        </span>
+      </div>
+    </section>
+
+    <section id="projects" tabindex="7" class="fade-slide visible">
+      <h2>Projects</h2>
+      <div class="project visible" tabindex="8">
+        <h3>MY ACCOUNT REVAMP PORTAL in HDFC Bank - TATA CONSULTANCY SERVICES</h3>
+        <p>Working on application for HDFC Life Insurance domain.Making responsive and user interaction single page
+          application with Agile process.Started career as frontend developer in HDFC Life Insurance customer portal and
+          still working.
+        </p>
+        <p>Responsible for full SDLC of end-customer facing Angular
+          application which is used by millions of life insurance
+          policy holders.Leveraged Angular 13, HTML5, Angular Material
+          Components, RxJS frameworks to implement responsive
+          modern user experiences.
+        </p>
+        <p>Implemented lazy loading, AOT compilation, and implemented several custom directives and pipes to
+          promote code reuse and readability.Used pdfjs package to generate pdf files of web pages.
+          Instrumental in Angular version upgrades and build issues.</p>
+        <p>Integrated Google and Adobe analytics scripts to enable
+          website usage analytics.
+          Utilized Jenkins for repeatable and predictable
+          deployments and Checkmarx tool for static analysis of
+          InfoSec vulnerabilities.</p>
+        <p>
+          Configured path rewrites, path forwarding, response
+          headers in Nginx web server.
+          Collaborated with multiple vendor, application and
+          support teams to deliver seamless value to customer.
+          Integration of customer portal with mobile app through
+          single sign on process.
+        </p>
+        <a href="https://myaccount.hdfclife.com" target="_blank" tabindex="9"
+          aria-label="View MY ACCOUNT REVAMP PORTAL Project">View Project</a>
+      </div>
+      <div class="project visible" tabindex="10">
+        <h3>Federal Express Corp</h3>
+        <p>Implemented FedEx Dynamic Pricing feature to provide real-time shipping rates based on package details,
+          destination, and delivery speed, enhancing user experience and cost transparency.</p>
+        <p>RESTful Node.js backend with JWT authentication, SQL integration, and automation testing coverage.</p>
+        <a href="https://www.fedex.com/secure-login/en-in/#/credentials" target="_blank" tabindex="11"
+          aria-label="Fedex Shipment Tracking">View Project</a>
+      </div>
+    </section>
+
+    <section id="education" tabindex="7" class="fade-slide visible">
+      <h2>Education</h2>
+      <div class="project visible" tabindex="8">
+        <h3>Higher Secondary Certificate</h3>
+        <p>DR.NATARAJAN MATRIC HIGHER SECONDARY SCHOOL</p>
+        <p>2015 - 2016</p>
+        <p>Higher Secondary Certificate in Science - 89%</p>
+      </div>
+      <div class="project visible" tabindex="10">
+        <h3>Bachelor of Engineering</h3>
+        <p>RAJALAKSHMI ENGINEERING COLLEGE</p>
+        <p>2016 - 2020</p>
+        <p>Bachelor of Engineering in Civil Engineering - 75%</p>
+      </div>
+    </section>
+
+    <section id="tech-timeline" tabindex="6" class="fade-slide visible">
+      <h2>Tech Stack Timeline</h2>
+      <div class="project visible">
+        <div class="timeline-item">
+          <span class="timeline-year">2016</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-desc">Started with C, C++ basics in college</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2018</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-desc">Learned HTML, CSS, JavaScript for web development</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2019</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-desc">Explored Angular and TypeScript for frontend projects</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2020</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-desc">Worked with Node.js, SQL, and REST APIs</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2022</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-desc">Integrated Jenkins, Playwright, Nginx, and cloud tools</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-desc">Upgraded Angular versions, focused on automation and analytics</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" tabindex="11" class="fade-slide visible">
+      <h2>Testimonials</h2>
+      <div class="project visible" tabindex="12">
+        <blockquote>
+          <p>"Unish consistently delivers high-quality solutions and is a reliable team player. His expertise in Angular
+            and attention to detail have greatly benefited our projects." <span class="testimonial-header"> - Project
+              Manager, TCS</span></p>
+        </blockquote>
+        <blockquote>
+          <p>"A quick learner and a passionate developer. Unish's contributions to our customer portal have improved
+            user experience and performance." <span class="testimonial-header"> - Project Manager, HDFC</span></p>
+        </blockquote>
+        <blockquote>
+          <p>"Unish is proactive and always ready to help. His technical skills and positive attitude make him an asset
+            to any team."<span class="testimonial-header"> - Colleague</span></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contact" tabindex="12" class="fade-slide visible">
+      <h2>Contact</h2>
+      <div class="project visible" tabindex="8">
+        <p>Email: <a href="mailto:unishkumar@gmail.com"
+            style="color: var(--accent-color)">unishkumar9626&#64;gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/unish-kumar-v/" target="_blank" rel="noopener"
+            style="color: var(--accent-color)">https://www.linkedin.com/in/unish-kumar-v/</a></p>
+        <p>GitHub: <a href="https://github.com/unishkumar" target="_blank" rel="noopener"
+            style="color: var(--accent-color)">unishkumar</a></p>
+        <p>Mobile: <a href="tel:+919626172029" style="color: var(--accent-color)">+91 96261 72029</a></p>
+        <p><a href="assets/unishkumar.vcf" download="UnishKumarV.vcf"
+            style="color: var(--accent-color); text-decoration: none; font-weight: bold;" aria-label="Download vCard">📇
+            Download vCard</a></p>
+      </div>
+    </section>
+
+    <section id="feedback" tabindex="13" class="fade-slide visible">
+      <h2>Feedback</h2>
+      <p>Feel free to reach out for any feedback or suggestions. Your input is valuable!</p>
+      <span class="input-box">
+        <div class="user-box">
+          <input type="text" placeholder="Give feedback" aria-label="Feedback" required>
+          <!-- <label>Your Name</label> -->
+        </div>
+      </span>
+      <button class="submit-button" type="submit" (click)="submitFeedback()"
+        aria-label="Submit Feedback">Submit</button>
+    </section>
+  </main>
+</div>
 <footer>
   <p>&copy; 2025 Unish Kumar V. Web Developer | All rights reserved</p>
 </footer>

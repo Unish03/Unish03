@@ -1,15 +1,17 @@
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, AfterViewInit, Renderer2 } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-resume',
-  imports: [SharedModule],
+  imports: [SharedModule,CommonModule],
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent implements AfterViewInit {
   isMenuOpen = false;
+  isDarkMode = false;
+
 
   constructor(private viewportScroller: ViewportScroller, private renderer: Renderer2) { }
 
@@ -45,4 +47,9 @@ export class ResumeComponent implements AfterViewInit {
       speechSynthesis.speak(utterance);
     }
   }
+
+toggleTheme() {
+  this.isDarkMode = !this.isDarkMode;
+  document.querySelector('.resume-container')?.classList.toggle('dark-mode', this.isDarkMode);
+}
 }
