@@ -265,6 +265,12 @@ footer {
     section {
         margin: 2em 1em;
     }
+    .fade-slide p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
 }
 
 /* Hamburger button styling */
