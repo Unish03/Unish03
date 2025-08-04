@@ -17,7 +17,7 @@ const routeConfig: Routes = [
       title: 'Home details',
     },
     {
-      path: 'resume',
+      path: 'unish',
       component: ResumeComponent,
       title: 'Resume',
     },
