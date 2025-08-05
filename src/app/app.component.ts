@@ -32,6 +32,6 @@ export class AppComponent {
     return this.router.url == '/details';
   }
   isResumeRoute(): boolean {
-    return this.router.url == '/resume';
+    return this.router.url == '/unish';
   }
 }

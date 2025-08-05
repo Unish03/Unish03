@@ -4,12 +4,12 @@
       <div class="flip-container" style="perspective: 600px;margin-right: 10px;">
         <div class="flipper" style="transition: 0.6s; transform-style: preserve-3d;">
           <div class="front" style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px;">
-            <img src="assets/images/profile.png" alt="Unish Kumar V" class="profile-img"
+            <img src="assets/images/profile_1.png" alt="Unish Kumar V" class="profile-img"
               style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />
           </div>
           <div class="back"
             style="backface-visibility: hidden; position: absolute; width: 120px; height: 120px; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f5f5f5;">
-            <img src="assets/images/background.png" alt="Unish Kumar V" class="profile-img"
+            <img src="assets/images/profile_2.png" alt="Unish Kumar V" class="profile-img"
               style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;" />
           </div>
         </div>
@@ -131,7 +131,12 @@
         <span>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="24"
             height="24" style="vertical-align:middle; margin-right:6px;">
-          CSS
+          CSS &amp;
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" width="24"
+            height="24" style="vertical-align:middle; margin-right:6px;">
+          Sass &amp;
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rxjs/rxjs-original.svg" alt="RxJS" width="24" height="20" />
+          RxJS
         </span>
         <span>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" width="24" height="24"
@@ -215,33 +220,33 @@
       <h2>Tech Stack Timeline</h2>
       <div class="project visible">
         <div class="timeline-item">
-          <span class="timeline-year">2020</span>
           <span class="timeline-dot"></span>
+          <span class="timeline-year">2020</span>
           <span class="timeline-desc">Started with C, C++ basics in college</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">2021</span>
           <span class="timeline-dot"></span>
+          <span class="timeline-year">2021</span>
           <span class="timeline-desc">Learned HTML, CSS, JavaScript, Angular and implemented Nginx web server for web development</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">2022</span>
           <span class="timeline-dot"></span>
+          <span class="timeline-year">2022</span>
           <span class="timeline-desc">Worked with Angular, TypeScript and RxJS for frontend projects</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">2023</span>
           <span class="timeline-dot"></span>
+          <span class="timeline-year">2023</span>
           <span class="timeline-desc">Integrated SQL databases, automated deployments with Jenkins, managed secure file transfers using WinSCP, and REST APIs integration</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">2024</span>
           <span class="timeline-dot"></span>
+          <span class="timeline-year">2024</span>
           <span class="timeline-desc">Implemented Google and Adobe analytics scripts to enable website usage analytics.Enhanced backend capabilities by supporting and developing robust Spring Boot Java microservices, ensuring seamless integration with frontend components.</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">2025</span>
           <span class="timeline-dot"></span>
+          <span class="timeline-year">2025</span>
           <span class="timeline-desc">Learned to work with GitHub and Copilot for code suggestions. Implemented okta authentication configuration for secure user access. Learning automation testing with Playwright and working with full-stack development.</span>
         </div>
       </div>
@@ -280,6 +285,20 @@
             Download vCard</a></p>
       </div>
     </section>
+
+<section id="project-gallery" tabindex="13" class="fade-slide visible">
+  <h2>Project Gallery</h2>
+  <div class="custom-carousel">
+    <button class="carousel-arrow left" (click)="prevSlide()" aria-label="Previous">&#10094;</button>
+    <div class="carousel-track">
+      <div class="carousel-slide" *ngFor="let project of projectGallery; let i = index" [class.active]="i === currentSlide">
+        <img [src]="project.image" [alt]="project.title" />
+        <div class="carousel-caption">{{ project.title }}</div>
+      </div>
+    </div>
+    <button class="carousel-arrow right" (click)="nextSlide()" aria-label="Next">&#10095;</button>
+  </div>
+</section>
 
     <section id="feedback" tabindex="13" class="fade-slide visible">
       <h2>Feedback</h2>
